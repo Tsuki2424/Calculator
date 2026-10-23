@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Display Screen -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#E0E0E0"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:text="@string/zero"
+        android:textColor="#000000"
+        android:textSize="32sp" />
+
+    <!-- Calculator Grid (5 columns) -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:columnCount="5"
+        android:rowCount="6">
+
+        <!-- ROW 1: MC, MR, MS, M+, M- -->
+        <Button android:text="@string/btn_mc" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:text="@string/btn_mr" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:text="@string/btn_ms" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:text="@string/btn_m_plus" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:text="@string/btn_m_minus" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- ROW 2: Back, CE, C, Sign, Sqrt -->
+        <Button android:id="@+id/btnBack" android:text="@string/btn_back" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnCE" android:text="@string/btn_ce" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnC" android:text="@string/btn_c" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnSign" android:text="@string/btn_sign" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnSqrt" android:text="@string/btn_sqrt" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- ROW 3: 7, 8, 9, /, % -->
+        <Button android:id="@+id/btn7" android:text="@string/btn_7" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn8" android:text="@string/btn_8" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn9" android:text="@string/btn_9" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnDiv" android:text="@string/btn_div" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnPercent" android:text="@string/btn_percent" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- ROW 4: 4, 5, 6, *, 1/x -->
+        <Button android:id="@+id/btn4" android:text="@string/btn_4" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn5" android:text="@string/btn_5" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn6" android:text="@string/btn_6" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnMul" android:text="@string/btn_mul" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn1OverX" android:text="@string/btn_1_over_x" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- ROW 5: 1, 2, 3, -, = (spans 2 rows) -->
+        <Button android:id="@+id/btn1" android:text="@string/btn_1" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn2" android:text="@string/btn_2" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btn3" android:text="@string/btn_3" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnSub" android:text="@string/btn_sub" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- The = button spans 2 rows -->
+        <Button android:id="@+id/btnEq" android:text="@string/btn_eq" android:layout_rowSpan="2" android:layout_columnWeight="1" android:layout_rowWeight="2" android:layout_width="0dp" android:layout_height="0dp" />
+
+        <!-- ROW 6: 0, ., + -->
+        <Button android:id="@+id/btn0" android:text="@string/btn_0" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnDot" android:text="@string/btn_dot" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+        <Button android:id="@+id/btnAdd" android:text="@string/btn_add" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp" />
+
+    </GridLayout>
+</LinearLayout>
